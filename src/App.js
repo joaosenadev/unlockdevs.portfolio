@@ -1,7 +1,16 @@
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Brabooo</h1>
-    </div>
-  );
-}
+import { createBrowserRouter } from "react-router-dom";
+
+// Pages
+import Home from "./pages/Home";
+import PageNotFound from "./pages/PageNotFound";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>
+  },
+  {
+    path: "*",
+    element: <PageNotFound/>
+  }
+])
