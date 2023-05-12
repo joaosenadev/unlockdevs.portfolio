@@ -35,6 +35,6 @@
     background-color: var(--dark-medium);
 }
 
-#dark .card-title, .card div span{
+#dark .card-title, #dark .card div span{
     color: var(--white-gray);
 }

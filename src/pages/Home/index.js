@@ -18,7 +18,6 @@ import { useContext } from 'react'
 import { ThemeContext } from '../../components/Theme'
 
 
-
 export default function Home() {
 
   const { theme, toggleTheme } = useContext(ThemeContext)

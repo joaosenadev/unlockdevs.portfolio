@@ -33,6 +33,10 @@ line{
     border: 1px solid var(--white-gray);
 }
 
+#dark line {
+    border: 1px solid var(--dark-gray);
+}
+
 .btn{
     max-width: 250px;
     height: 60px;

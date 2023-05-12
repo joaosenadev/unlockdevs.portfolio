@@ -22,7 +22,7 @@
 }
 .skills-card p{
     font-size: 23px;
-    color: var(--cor-roxo-10);
+    color: var(--cor-roxo-12);
 }
 
 .over{
@@ -38,6 +38,6 @@
 #dark .skills-card{
     background-color: var(--dark-medium);
 }
-#dark .skills-card h1, .skills-card p{
+#dark .skills-card h1, #dark .skills-card p{
     color: var(--white-gray);
 }
