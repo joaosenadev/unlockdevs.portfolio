@@ -34,3 +34,10 @@
     transform: scale(1.1);
     z-index: 2;
 }
+
+#dark .skills-card{
+    background-color: var(--dark-medium);
+}
+#dark .skills-card h1, .skills-card p{
+    color: var(--white-gray);
+}

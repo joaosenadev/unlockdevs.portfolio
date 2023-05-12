@@ -14,20 +14,20 @@
     display: flex;
     font-size: 23px;
     gap: 50px;
-    color: var(--dark);
 }
 .navbar a{
-    color: var(--dark);
+    transition: .3s;
+    color: var(--cor-roxo-12);
 }
 .navbar a:hover{
-    color: var(--dark-gray);
+    color: var(--cor-roxo-10);
 }
 
 /* Page active  TEMP*/
 .active{
     position: relative;
-    color: var(--purple) !important;
-    font-weight: 500;
+    color: var(--pink) !important;
+    font-weight: 400;
     transition: .2s;
 }
 .active::before{
@@ -72,18 +72,54 @@
 }
 
 .theme-mode{
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    width: 45px;
+    height: 45px;
     border: 0;
-    border-radius: 100%;
+    border-radius: 100px;
+    transition: .5s;
     background: var(--linear-gradient);
+    gap: 10px;
+}
+
+.theme-name{
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .5s;
 }
 .theme-mode:hover{
+    width: 150px;
+    justify-content: center;
     cursor: pointer;
-    transition: .5s;
-    transform: scale(1.02);
-    box-shadow: 0 2px 5px 1px var(--box-shadow);
+    padding: 0 20px;
+}
+.theme-mode:hover .theme-name{
+    display: flex;
 }
 .theme-mode svg{
     background: transparent;
+}
+
+
+/* Dark Mode And Light Mode */
+
+#dark .theme-name{
+    color: var(--white);
+}
+
+/* Nav Bar */
+#dark .navbar a{
+    color: var(--white);
+}
+#dark .navbar a:hover{
+    color: var(--white-gray);
+}
+
+#dark .active{
+    color: var(--pink) !important;
 }

@@ -4,7 +4,8 @@ import Team from '../../components/TeamCard'
 import Skills from '../../components/SkillsCard'
 import Projects from '../../components/ProjectsCard'
 
-import Symbol from "../../assets/symbol lightpurple.svg"
+import SymbolLight from "../../assets/symbol lightpurple.svg"
+import SymbolDark from "../../assets/symbol darkpurple.png"
 import "./home.css"
 
 // Icons
@@ -13,9 +14,15 @@ import { IoMailOutline as Mail } from "react-icons/io5"
 import { FiSend } from "react-icons/fi"
 import { FaTiktok as Tiktok } from "react-icons/fa"
 import { BsDiscord as Discord, BsGithub as GitHub, BsInstagram as Instagram} from "react-icons/bs"
+import { useContext } from 'react'
+import { ThemeContext } from '../../components/Theme'
+
 
 
 export default function Home() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext)
+
   return (
     <div className="home-container">
         <Header/>
@@ -39,7 +46,7 @@ export default function Home() {
           </section>
 
           <section className="unlock-symbol">
-            <img src={Symbol} alt="Unlock Symbol"/>
+            <img src={theme === "light" ? SymbolLight : SymbolDark} alt="Unlock Symbol"/>
           </section>
         </main>
 

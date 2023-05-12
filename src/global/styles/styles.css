@@ -5,10 +5,12 @@
     --white-gray: #e9e6ef;
     --green: #00cc52;
     --light-green: #01fd46;
-    --dark-gray: #372f44;
-    --dark: #0a0511;
     --linear-gradient: linear-gradient(to right, var(--pink), var(--purple));
     --box-shadow: #0a051128;
+
+    --dark-medium: #211B29;
+    --dark-gray: #372f44;
+    --dark: #0a0511;
     
     /* Variações do roxo */
     --cor-roxo-01: #fffbff;
@@ -42,10 +44,10 @@ line{
     font-weight: 600;
     letter-spacing: 1px;
     margin: 2px 0;
+    transition: .3s;
 }
 .btn:hover{
     cursor: pointer;
-    transition: .3s;
     transform: scale(1.02);
     box-shadow: 0 2px 5px 1px var(--box-shadow);
 }
@@ -58,11 +60,11 @@ line{
     color: var(--purple);
     font-weight: 600;
     letter-spacing: 1px;
+    transition: .3s;
     margin: 5px 0;
 }
 .btn-2:hover{
     cursor: pointer;
-    transition: .3s;
     transform: scale(1.02);
     box-shadow: 0 2px 15px 1px var(--box-shadow);
 }
@@ -71,12 +73,12 @@ line{
     border: none;
     font-size: 25px;
     font-weight: bold;
+    transition: .3s;
     background: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .view-more-two:hover{
-    transition: .3s;
     cursor: pointer;
     transform: scale(1.05);
     letter-spacing: 5px;
@@ -92,4 +94,9 @@ line{
     font-weight: bold;
     margin: 25px 0 50px 0;
     color: var(--purple);
+}
+
+#dark .btn-2{
+    color: var(--pink);
+    background-color: var(--dark-medium);
 }

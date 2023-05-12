@@ -1,10 +1,15 @@
 import { Link, useLocation } from "react-router-dom"
 import "./header.css"
+
 // Assets
 import Logo from "../../assets/logo_purple.svg"
 
 // Icons
 import { BsMoonFill as Moon } from "react-icons/bs"
+import { FiSun as Sun } from "react-icons/fi"
+
+import { useContext } from "react"
+import { ThemeContext } from "../Theme"
 
 export default function Header() {
 
@@ -13,9 +18,12 @@ export default function Header() {
         projects: location.pathname === "/projects" ? "active" : "",
         aboutUs: location.pathname === "/about-us" ? "active" : "",
         community: location.pathname === "/community" ? "active" : "",
-
     }
 
+    const { theme, toggleTheme } = useContext(ThemeContext)
+    const handleToggleTheme = () => {
+        toggleTheme()
+    }
 
   return (
     <div className="header-container">
@@ -34,10 +42,14 @@ export default function Header() {
         <section className="contact-and-theme">
             <Link className="btn contact">Contact</Link>
 
-            <button className="theme-mode">
-                <Moon size={20} color="black"/>
+            <button onClick={handleToggleTheme} className="theme-mode">
+                {theme === "dark" ? (
+                    <Sun size={25} color="white"/>
+                ): (<Moon size={20} color="black"/> )}
+                <span className="theme-name">{theme === "light" ? "Dark" : "Light"}</span>
             </button>
         </section>
     </div>
   )
 }
+

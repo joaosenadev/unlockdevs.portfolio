@@ -23,9 +23,18 @@
     font-weight: 500;
     color: var(--cor-roxo-12);
 }
-.card span{
+.card div span{
     font-size: 24px;
     text-align: center;
     font-weight: 300;
-    color: var(--cor-roxo-11);
+    color: var(--cor-roxo-12);
+}
+
+
+#dark .card{
+    background-color: var(--dark-medium);
+}
+
+#dark .card-title, .card div span{
+    color: var(--white-gray);
 }

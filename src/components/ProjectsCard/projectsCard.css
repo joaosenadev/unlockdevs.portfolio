@@ -7,3 +7,7 @@
     background-color: var(--white-gray);
     border-radius: 30px;
 }
+
+#dark .projects-card{
+    background-color: var(--dark-medium);
+}
