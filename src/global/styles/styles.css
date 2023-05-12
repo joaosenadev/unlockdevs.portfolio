@@ -1,0 +1,95 @@
+:root{
+    --purple: #a100ff;
+    --pink: #ec00ff;
+    --white: #fdfffe;
+    --white-gray: #e9e6ef;
+    --green: #00cc52;
+    --light-green: #01fd46;
+    --dark-gray: #372f44;
+    --dark: #0a0511;
+    --linear-gradient: linear-gradient(to right, var(--pink), var(--purple));
+    --box-shadow: #0a051128;
+    
+    /* Variações do roxo */
+    --cor-roxo-01: #fffbff;
+    --cor-roxo-02: #fff7fd;
+    --cor-roxo-03: #fbecff;
+    --cor-roxo-04: #f2daff;
+    --cor-roxo-05: #e1b6ff;
+    --cor-roxo-06: #cf91ff;
+    --cor-roxo-07: #bd69ff;
+    --cor-roxo-08: #aa36ff;
+    --cor-roxo-09: #8e00e2;
+    --cor-roxo-10: #6c00ae;
+    --cor-roxo-11: #4c007c;
+    --cor-roxo-12: #2e004e;
+}
+
+line{
+    margin: 5% 0;
+    width: 80%;
+    border: 1px solid var(--white-gray);
+}
+
+.btn{
+    max-width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 24px;
+    background: var(--linear-gradient);
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 2px 0;
+}
+.btn:hover{
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.02);
+    box-shadow: 0 2px 5px 1px var(--box-shadow);
+}
+
+.btn-2{
+    border: none;
+    border-radius: 100px;
+    padding: 20px 60px;
+    background: var(--white);
+    color: var(--purple);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+.btn-2:hover{
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.02);
+    box-shadow: 0 2px 15px 1px var(--box-shadow);
+}
+
+.view-more-two{
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.view-more-two:hover{
+    transition: .3s;
+    cursor: pointer;
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
+
+.title{
+    font-family: "Optien", sans-serif;
+    display: flex;
+    text-align: center;
+    font-size: 55px;
+    transform: translateX(20px);
+    letter-spacing: 0.6em;
+    font-weight: bold;
+    margin: 25px 0 50px 0;
+    color: var(--purple);
+}

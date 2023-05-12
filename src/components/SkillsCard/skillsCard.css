@@ -1,0 +1,36 @@
+.skills-box{
+    display: flex;
+    padding-bottom: 40px;
+    gap: 25px;
+}
+.skills-card{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 30px 35px;
+    width: 520px;
+    height: 550px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+.skills-card h1{
+    font-size: 42px;
+    color: var(--cor-roxo-12);
+   
+}
+.skills-card p{
+    font-size: 23px;
+    color: var(--cor-roxo-10);
+}
+
+.over{
+    user-select: none;
+    filter: blur(10px);
+    transform: scale(0.9);
+}
+.central{
+    transform: scale(1.1);
+    z-index: 2;
+}

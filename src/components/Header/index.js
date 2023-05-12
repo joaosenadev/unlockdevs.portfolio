@@ -10,7 +10,7 @@ export default function Header() {
 
     const location = useLocation()
     const setActive = {
-        projects: location.pathname === "/" ? "active" : "",
+        projects: location.pathname === "/projects" ? "active" : "",
         aboutUs: location.pathname === "/about-us" ? "active" : "",
         community: location.pathname === "/community" ? "active" : "",
 
@@ -25,14 +25,14 @@ export default function Header() {
 
          <nav className="navbar">
             <ul>
-                <li><Link className={setActive.projects}>Projects</Link></li>
-                <li><Link className={setActive.aboutUs}>About Us</Link></li>
-                <li><Link className={setActive.community}>Community</Link></li>
+                <li><Link to="/projects" className={setActive.projects}>Projects</Link></li>
+                <li><Link to="/about-us" className={setActive.aboutUs}>About Us</Link></li>
+                <li><Link to="/community" className={setActive.community}>Community</Link></li>
             </ul>
          </nav>
         
         <section className="contact-and-theme">
-            <Link className="contact-btn">Contact</Link>
+            <Link className="btn contact">Contact</Link>
 
             <button className="theme-mode">
                 <Moon size={20} color="black"/>

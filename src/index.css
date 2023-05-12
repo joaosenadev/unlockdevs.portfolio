@@ -1,14 +1,23 @@
 @import url('https://fonts.cdnfonts.com/css/gotham');
-@import "./global/colors/colors.css";
+@import url('https://fonts.cdnfonts.com/css/optien');
+@import "./global/styles/styles.css";
 
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
   font-family: "Gotham", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--white);
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100px;
+  background: var(--pink);
 }
