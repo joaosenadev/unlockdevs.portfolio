@@ -11,6 +11,9 @@
     --dark-medium: #211B29;
     --dark-gray: #372f44;
     --dark: #0a0511;
+
+    --dark-line: #372f4451;
+    --white-line: #e9e6ef51;
     
     /* Variações do roxo */
     --cor-roxo-01: #fffbff;
@@ -30,11 +33,11 @@
 line{
     margin: 5% 0;
     width: 80%;
-    border: 1px solid var(--white-gray);
+    border: 1px solid var(--white-line);
 }
 
 #dark line {
-    border: 1px solid var(--dark-gray);
+    border: 1px solid var(--dark-line);
 }
 
 .btn{
@@ -49,6 +52,7 @@ line{
     letter-spacing: 1px;
     margin: 2px 0;
     transition: .3s;
+    text-transform: uppercase;
 }
 .btn:hover{
     cursor: pointer;
@@ -66,6 +70,7 @@ line{
     letter-spacing: 1px;
     transition: .3s;
     margin: 5px 0;
+    text-transform: uppercase;
 }
 .btn-2:hover{
     cursor: pointer;
@@ -73,11 +78,50 @@ line{
     box-shadow: 0 2px 15px 1px var(--box-shadow);
 }
 
+#dark .btn-2{
+    color: var(--pink);
+    background-color: var(--dark-medium);
+}
+
+
+
+.open-select-lang{
+    display: flex;
+    margin: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: .3s;
+    background-color: transparent;
+    color: var(--dark);
+}
+#dark .open-select-lang{
+    color: var(--white-gray);
+}
+
+.open-select-lang:hover{
+    color: var(--dark-gray);
+}
+.open-select-lang:active{
+    color: var(--white-gray);
+}
+#dark .open-select-lang{
+    color: var(--white);
+}
+#dark .open-select-lang:hover{
+    color: var(--white-gray);
+}
+#dark .open-select-lang:active{
+    color: var(--dark-gray);
+}
+
+
+
 .view-more-two{
     border: none;
     font-size: 25px;
     font-weight: bold;
     transition: .3s;
+    text-transform: uppercase;
     background: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -92,15 +136,19 @@ line{
     font-family: "Optien", sans-serif;
     display: flex;
     text-align: center;
+    text-transform: uppercase;
     font-size: 55px;
     transform: translateX(20px);
-    letter-spacing: 0.6em;
     font-weight: bold;
     margin: 25px 0 50px 0;
     color: var(--purple);
 }
 
-#dark .btn-2{
-    color: var(--pink);
-    background-color: var(--dark-medium);
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+    background: var(--pink);
 }

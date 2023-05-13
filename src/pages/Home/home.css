@@ -123,6 +123,8 @@ main{
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 .footer-contact span{
     font-size: 50px;

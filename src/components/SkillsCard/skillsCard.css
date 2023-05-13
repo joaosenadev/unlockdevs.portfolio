@@ -17,6 +17,7 @@
 }
 .skills-card h1{
     font-size: 42px;
+    text-transform: uppercase;
     color: var(--cor-roxo-12);
    
 }

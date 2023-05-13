@@ -1,20 +1,21 @@
 import "./skillsCard.css"
+import { trad } from "../Header"
 
 export default function Skills() {
   return (
     <div className="skills-box">
         <div className="skills-card over">    
-            <h1>Mobile Development</h1>
+            <h1>{trad("skillsCard.mobDev")}</h1>
             <p>{exempleTxt}</p>
         </div>
 
         <div className="skills-card central">    
-            <h1>Web Development</h1>
+            <h1>{trad("skillsCard.webDev")}</h1>
             <p>{exempleTxt}</p>
         </div>
 
         <div className="skills-card over">    
-            <h1>Games Development</h1>
+            <h1>{trad("skillsCard.gameDev")}</h1>
             <p>{exempleTxt}</p>
         </div>
     </div>
