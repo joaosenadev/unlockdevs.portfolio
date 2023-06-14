@@ -3,6 +3,8 @@ import LanguageDetector from "i18next-browser-languagedetector"
 
 import { messages } from "./locales"
 
+export const trad = i18n.t
+
 i18n
     .use(LanguageDetector)
     .init({

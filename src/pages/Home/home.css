@@ -6,6 +6,8 @@
     align-items: center;
     background: linear-gradient(5.04deg, #A100FF 4.05%, rgba(166, 0, 255, 0.9375) 39.24%, rgba(236, 0, 255, 0) 76.7%);
     overflow: hidden;
+    transition: .3s;
+    background-color: var(--white);
 }
 
 main{
@@ -55,10 +57,7 @@ main{
 
 .scroll-down{
     color: var(--pink);
-    margin: 100px 0;
-}
-.scroll-down svg{
-    animation: scroll-down 1s linear infinite;
+    margin: 30px 0;
 }
 
 /* Teams */
@@ -172,24 +171,8 @@ main{
     font-weight: 200;
 }
 
-/* Animations */
-
-@keyframes scroll-down {
-    from{
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-
 /* Dark and Light Mode */
-#light .home-container{
-    background-color: var(--white);
-}
+
 #dark .home-container{
     background-color: var(--dark);
 }

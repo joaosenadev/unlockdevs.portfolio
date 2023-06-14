@@ -43,8 +43,6 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <Header />
-
       <main>
         <section className="description-container">
           <motion.p
@@ -57,7 +55,7 @@ export default function Home() {
 
           <motion.button
             initial={{ scale: .8, opacity: 0 }}
-            whileInView={{scale: 1 , opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: .5 }}
             className="btn view-more">
             {trad("main.viewMore")}
@@ -87,9 +85,13 @@ export default function Home() {
         </motion.section>
       </main>
 
-      <div className="scroll-down">
+      <motion.div
+      initial={{y: -50}}
+      animate={{y: 0}}
+      transition={{duration: Infinity}}
+      className="scroll-down">
         <Arrow size={40} />
-      </div>
+      </motion.div>
 
       <motion.section
         initial={mainAnimFrom}
@@ -100,7 +102,7 @@ export default function Home() {
         <motion.h1 className="title skills"
           initial={{ letterSpacing: "0" }}
           whileInView={{ letterSpacing: "0.6em" }}
-          transition={{duration: 1, ease: "easeOut"}}>{trad("main.teams")}
+          transition={{ duration: 1, ease: "easeOut" }}>{trad("main.teams")}
         </motion.h1>
 
         <div className="cards-content">
@@ -123,7 +125,7 @@ export default function Home() {
         <motion.h1 className="title skills"
           initial={{ letterSpacing: "0" }}
           whileInView={{ letterSpacing: "0.6em" }}
-          transition={{duration: 1, ease: "easeOut"}}>{trad("main.skills")}
+          transition={{ duration: 1, ease: "easeOut" }}>{trad("main.skills")}
         </motion.h1>
 
         <Skills />
@@ -140,7 +142,7 @@ export default function Home() {
         <motion.h1
           initial={{ letterSpacing: "0" }}
           whileInView={{ letterSpacing: "0.6em" }}
-          transition={{duration: 1, ease: "easeOut"}}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="title">
           {trad("main.projects")}
         </motion.h1>

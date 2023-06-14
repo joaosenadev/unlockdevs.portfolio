@@ -9,6 +9,10 @@ const messages = {
                 light: "Light",
                 dark: "Dark",
             },
+            error: {
+                backToHome: "Back To Home",
+                pageNotFound: "Sorry, page not found."
+            },
             phrase: {
                 unlock: "Unlocking the",
                 power: "power",

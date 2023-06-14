@@ -3,8 +3,6 @@ import "./header.css"
 
 // Assets
 import Logo from "../../assets/logo_purple.svg"
-import FlagBR from "../../assets/brazil.png"
-import FlagUSA from "../../assets/usa.png"
 
 // Icons
 import { BsMoonFill as Moon, BsGlobe as Globe } from "react-icons/bs"
@@ -12,14 +10,14 @@ import { FiSun as Sun } from "react-icons/fi"
 
 import { useContext, useState } from "react"
 import { ThemeContext } from "../Theme"
-import { Modal } from "../Modal"
+import { SelectLang } from "../SelectLanguage"
 
 // Translate
 import i18n from '../../translate/i18n'
 import { motion } from "framer-motion"
 export const { t: trad } = i18n
 
-export default function Header() {
+export function Header() {
 
     const [abrirModal, setAbrirModal] = useState(false)
 
@@ -85,7 +83,7 @@ export default function Header() {
 
                 <motion.section
                     initial={{ translateY: 20, opacity: 0 }}
-                    whileInView={{translateY: 0, opacity: 1 }}
+                    whileInView={{ translateY: 0, opacity: 1 }}
                     transition={transition} className="contact-and-theme">
                     <Link className="btn contact">{trad("navbar.contact")}</Link>
 
@@ -97,25 +95,12 @@ export default function Header() {
                         <span className="theme-name">{theme === "light" ? trad("navbar.dark") : trad("navbar.light")}</span>
                     </button>
 
-                    <button onClick={() => setAbrirModal(true)} className="open-select-lang">
-                        <Globe size={35} />
-                    </button>
+                    <div className="languages">
+                        <SelectLang />
+                    </div>
                 </motion.section>
             </div>
 
-            <Modal modalTitle={trad("modalLang.title")} setModalOpen={() => setAbrirModal(!abrirModal)} isOpen={abrirModal}>
-                <div className="language-content">
-                    <span onClick={() => handleSelectLanguage("pt-BR")}>
-                        <img src={FlagBR} width={40} />
-                        Português
-                    </span>
-
-                    <span onClick={() => handleSelectLanguage("en")}>
-                        <img src={FlagUSA} width={40} />
-                        English
-                    </span>
-                </div>
-            </Modal>
         </>
     )
 }

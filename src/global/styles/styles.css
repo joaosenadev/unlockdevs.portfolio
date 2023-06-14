@@ -30,6 +30,7 @@
     --cor-roxo-12: #2e004e;
 }
 
+
 line{
     margin: 5% 0;
     width: 80%;
@@ -123,7 +124,7 @@ line{
     transition: .3s;
     text-transform: uppercase;
     background: var(--linear-gradient);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .view-more-two:hover{

@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react"
 
 export const ThemeContext = createContext(null)
 
-export default function Theme(props) {
+export function Theme(props) {
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
 
     const toggleTheme = () => {

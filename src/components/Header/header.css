@@ -5,7 +5,13 @@
     height: 70px;
     align-items: center;
     justify-content: space-around;
+    transition: .3s;
+    background-color: var(--white);
 }
+#dark .header-container{
+    background-color: var(--dark);
+}
+
 .logo-image{
     width: 200px;
 }
@@ -26,6 +32,9 @@
 
 /* Page active  TEMP*/
 .active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     color: var(--pink) !important;
     font-weight: 400;
@@ -35,10 +44,8 @@
     content: "";
     position: absolute;
     display: flex;
-    justify-content: center;
     top: 30px;
-    width: 85%;
-    transform: translateX(7px);
+    width: 80%;
     height: 2px;
     border-radius: 100px;
     background-color: var(--pink);
@@ -107,43 +114,9 @@
 }
 
 
-.language-content{
+.languages{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-.language-content span{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 5px 25px;
-    border-radius: 10px;
-    transition: .3s;
-    user-select: none;
-    color: var(--dark);
-}
-
-.language-content span:hover{
-    cursor: pointer;
-    background-color: var(--white-gray);
-}
-.language-content span:active{
-    background-color: var(--dark-gray);
-}
-
-
-#dark .language-content span{
-    color: var(--white-gray);
-}
-#dark .language-content span:hover{
-    cursor: pointer;
-    background-color: var(--dark-gray);
-}
-#dark .language-content span:active{
-    background-color: var(--dark);
+    margin-left: 10px;
 }
 
 

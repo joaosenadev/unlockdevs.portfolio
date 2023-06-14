@@ -1,0 +1,177 @@
+:root{
+    --lang-border: 2px solid var(--purple);
+    --lang-img-size: 45px;
+}
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.select{
+    cursor: pointer;
+    color: var(--white);
+    transition: .3s;
+    user-select: none;
+}
+.select img{
+    display: flex;
+    width: var(--lang-img-size);
+}
+.flags img{
+    display: flex;
+    width: var(--lang-img-size);
+}
+
+/* Open */
+
+.select-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px;
+    top: 65px;
+    z-index: 2;
+    border-radius: 8px;
+    color: var(--dark);
+    animation: showLang .3s ease-in-out;
+    border: var(--lang-border);
+    transition: .3s;
+    background-color: var(--white);
+}
+
+#dark .select-content{
+    color: var(--white);
+    background-color: var(--dark);
+}
+
+
+@keyframes showLang {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.select-content::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    rotate: 45deg;
+    top: -13px;
+    z-index: -2;
+    border-radius: 4px;
+    border: var(--lang-border);
+}
+.select-content::after{
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    rotate: 45deg;
+    top: -10px;
+    z-index: -1;
+    border-radius: 4px;
+    transition: .3s;
+    background-color: var(--white);
+}
+#dark .select-content::after{
+    background-color: var(--dark);
+}
+
+/* Close */
+
+.close-content{
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 10px;
+    top: 65px;
+    z-index: 2;
+    border-radius: 8px;
+    color: var(--dark);
+    border: var(--lang-border);
+    background-color: var(--white);
+    transition: .3s;
+    animation: closeLang .3s ease-in-out;
+}
+
+#dark .close-content{
+    color: var(--white);
+    background-color: var(--dark);
+}
+
+.close-content::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    rotate: 45deg;
+    top: -13px;
+    z-index: -2;
+    border-radius: 4px;
+    transition: .3s;
+    border: var(--lang-border);
+}
+.close-content::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    rotate: 45deg;
+    top: -11px;
+    z-index: -1;
+    border-radius: 4px;
+    transition: .3s;
+    background-color: var(--white);
+}
+#dark .close-content::after{
+    background-color: var(--dark);
+}
+
+@keyframes closeLang {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+.langs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    user-select: none;
+    width: 100%;
+}
+.langs:hover{
+    background-color: var(--white-gray);
+}
+#dark .langs:hover{
+    background-color: var(--dark-gray);
+}
+
